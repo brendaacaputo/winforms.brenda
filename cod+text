@@ -1,0 +1,280 @@
+\\ codigo com mais elementos de textbox
+
+
+namespace brenda; 
+
+public partial class Form1 : Form
+{
+    TextBox campoNomeCompleto;
+    TextBox campoSexo;
+    TextBox campoDataNascimento;
+    TextBox campoCPF;
+    TextBox campoRG;
+    TextBox campoNacionalidade;
+    TextBox campoEmail;
+    TextBox campoTelefoneCelular;
+    TextBox campoTelefoneResidencial;
+    TextBox campoCEP;
+    TextBox campoLogradouro;
+    TextBox campoNumero;
+    TextBox campoComplemento;
+    TextBox campoBairro;
+    TextBox campoCidade;
+    TextBox campoEstado;
+    TextBox campoCurso;
+    TextBox campoMatricula;
+    TextBox campoAnoSemestre;
+    TextBox campoModalidade;
+    TextBox campoTurno;
+    TextBox campoEscolaridadeAnterior;
+    TextBox campoNomeResponsavel;
+    TextBox campoCPFResponsavel;
+    TextBox campoObservacao;
+
+    //varivel botão
+        
+        private Button? btnCadastrar;
+        private Button? btnVoltar;
+        private Button? btnLogar;
+
+    public Form1()
+    {
+        InitializeComponent();
+        criarInput();
+        criarBotoes();
+    }
+
+    private void criarInput(){
+        // ===== DADOS PESSOAIS =====
+        campoNomeCompleto = new TextBox();//cria o campo de texto
+        campoNomeCompleto.Location = new Point(160, 50);//define o lugar da tela do campo de texto
+        campoNomeCompleto.Width = 400;//define a largura do campo de texto
+        Controls.Add(campoNomeCompleto);//Coloca o campo na tela
+
+        campoSexo = new TextBox();//cria o campo de texto
+        campoSexo.Location = new Point(650, 50);//define o lugar da tela do campo de texto
+        campoSexo.Width = 120;//define a largura do campo de texto
+        Controls.Add(campoSexo);//Coloca o campo na tela
+
+        campoDataNascimento = new TextBox();//cria o campo de texto
+        campoDataNascimento.Location = new Point(180, 90);//define o lugar da tela do campo de texto
+        campoDataNascimento.Width = 110;//define a largura do campo de texto
+        Controls.Add(campoDataNascimento);//Coloca o campo na tela
+
+        campoCPF = new TextBox();//cria o campo de texto
+        campoCPF.Location = new Point(340, 90);//define o lugar da tela do campo de texto
+        campoCPF.Width = 130;//define a largura do campo de texto
+        Controls.Add(campoCPF);//Coloca o campo na tela
+
+        campoRG = new TextBox();//cria o campo de texto
+        campoRG.Location = new Point(520, 90);//define o lugar da tela do campo de texto
+        campoRG.Width = 110;//define a largura do campo de texto
+        Controls.Add(campoRG);//Coloca o campo na tela
+
+        campoNacionalidade = new TextBox();//cria o campo de texto
+        campoNacionalidade.Location = new Point(780, 90);//define o lugar da tela do campo de texto
+        campoNacionalidade.Width = 80;//define a largura do campo de texto
+        Controls.Add(campoNacionalidade);//Coloca o campo na tela
+
+        campoEmail = new TextBox();//cria o campo de texto
+        campoEmail.Location = new Point(100, 130);//define o lugar da tela do campo de texto
+        campoEmail.Width = 200;//define a largura do campo de texto
+        Controls.Add(campoEmail);//Coloca o campo na tela
+
+        campoTelefoneCelular = new TextBox();//cria o campo de texto
+        campoTelefoneCelular.Location = new Point(480, 130);//define o lugar da tela do campo de texto
+        campoTelefoneCelular.Width = 140;//define a largura do campo de texto
+        Controls.Add(campoTelefoneCelular);//Coloca o campo na tela
+
+        campoTelefoneResidencial = new TextBox();//cria o campo de texto
+        campoTelefoneResidencial.Location = new Point(820, 130);//define o lugar da tela do campo de texto
+        campoTelefoneResidencial.Width = 70;//define a largura do campo de texto
+        Controls.Add(campoTelefoneResidencial);//Coloca o campo na tela
+
+        // ===== DADOS DE ENDEREÇO =====
+        campoCEP = new TextBox();//cria o campo de texto
+        campoCEP.Location = new Point(80, 200);//define o lugar da tela do campo de texto
+        campoCEP.Width = 90;//define a largura do campo de texto
+        Controls.Add(campoCEP);//Coloca o campo na tela
+
+        campoLogradouro = new TextBox();//cria o campo de texto
+        campoLogradouro.Location = new Point(300, 200);//define o lugar da tela do campo de texto
+        campoLogradouro.Width = 180;//define a largura do campo de texto
+        Controls.Add(campoLogradouro);//Coloca o campo na tela
+
+        campoNumero = new TextBox();//cria o campo de texto
+        campoNumero.Location = new Point(580, 200);//define o lugar da tela do campo de texto
+        campoNumero.Width = 60;//define a largura do campo de texto
+        Controls.Add(campoNumero);//Coloca o campo na tela
+
+        campoComplemento = new TextBox();//cria o campo de texto
+        campoComplemento.Location = new Point(790, 200);//define o lugar da tela do campo de texto
+        campoComplemento.Width = 80;//define a largura do campo de texto
+        Controls.Add(campoComplemento);//Coloca o campo na tela
+
+        campoBairro = new TextBox();//cria o campo de texto
+        campoBairro.Location = new Point(100, 240);//define o lugar da tela do campo de texto
+        campoBairro.Width = 180;//define a largura do campo de texto
+        Controls.Add(campoBairro);//Coloca o campo na tela
+
+        campoCidade = new TextBox();//cria o campo de texto
+        campoCidade.Location = new Point(370, 240);//define o lugar da tela do campo de texto
+        campoCidade.Width = 180;//define a largura do campo de texto
+        Controls.Add(campoCidade);//Coloca o campo na tela
+
+        campoEstado = new TextBox();//cria o campo de texto
+        campoEstado.Location = new Point(640, 240);//define o lugar da tela do campo de texto
+        campoEstado.Width = 60;//define a largura do campo de texto
+        Controls.Add(campoEstado);//Coloca o campo na tela
+
+        // ===== DADOS ACADÊMICOS =====
+        campoCurso = new TextBox();//cria o campo de texto
+        campoCurso.Location = new Point(100, 310);//define o lugar da tela do campo de texto
+        campoCurso.Width = 200;//define a largura do campo de texto
+        Controls.Add(campoCurso);//Coloca o campo na tela
+
+        campoMatricula = new TextBox();//cria o campo de texto
+        campoMatricula.Location = new Point(400, 310);//define o lugar da tela do campo de texto
+        campoMatricula.Width = 120;//define a largura do campo de texto
+        Controls.Add(campoMatricula);//Coloca o campo na tela
+
+        campoAnoSemestre = new TextBox();//cria o campo de texto
+        campoAnoSemestre.Location = new Point(680, 310);//define o lugar da tela do campo de texto
+        campoAnoSemestre.Width = 140;//define a largura do campo de texto
+        Controls.Add(campoAnoSemestre);//Coloca o campo na tela
+
+        campoModalidade = new TextBox();//cria o campo de texto
+        campoModalidade.Location = new Point(130, 350);//define o lugar da tela do campo de texto
+        campoModalidade.Width = 120;//define a largura do campo de texto
+        Controls.Add(campoModalidade);//Coloca o campo na tela
+
+        campoTurno = new TextBox();//cria o campo de texto
+        campoTurno.Location = new Point(330, 350);//define o lugar da tela do campo de texto
+        campoTurno.Width = 100;//define a largura do campo de texto
+        Controls.Add(campoTurno);//Coloca o campo na tela
+
+        campoEscolaridadeAnterior = new TextBox();//cria o campo de texto
+        campoEscolaridadeAnterior.Location = new Point(680, 350);//define o lugar da tela do campo de texto
+        campoEscolaridadeAnterior.Width = 160;//define a largura do campo de texto
+        Controls.Add(campoEscolaridadeAnterior);//Coloca o campo na tela
+
+        // ===== DADOS DO RESPONSÁVEL =====
+        campoNomeResponsavel = new TextBox();//cria o campo de texto
+        campoNomeResponsavel.Location = new Point(220, 420);//define o lugar da tela do campo de texto
+        campoNomeResponsavel.Width = 280;//define a largura do campo de texto
+        Controls.Add(campoNomeResponsavel);//Coloca o campo na tela
+
+        campoCPFResponsavel = new TextBox();//cria o campo de texto
+        campoCPFResponsavel.Location = new Point(700, 420);//define o lugar da tela do campo de texto
+        campoCPFResponsavel.Width = 130;//define a largura do campo de texto
+        Controls.Add(campoCPFResponsavel);//Coloca o campo na tela
+
+        campoObservacao = new TextBox();//cria o campo de texto
+        campoObservacao.Location = new Point(140, 460);//define o lugar da tela do campo de texto
+        campoObservacao.Width = 700;//define a largura do campo de texto
+        Controls.Add(campoObservacao);//Coloca o campo na tela
+    }
+
+    private void criarBotoes(){
+         //colocar o botão na tela
+
+        btnCadastrar = new Button(); //Cria o Botao
+        btnCadastrar.Text = "Cadastrar"; //Cria o texto do Botao
+        btnCadastrar.Location = new Point(20, 500); // Posicionado o Botao na tela
+        btnCadastrar.Width = 200; //Largura do Botao
+        btnCadastrar.Height = 35; //Altura do Botao
+        Controls.Add(btnCadastrar); //Coloca o Botao na tela
+
+        btnVoltar = new Button(); //Cria o Botao
+        btnVoltar.Text = "Voltar"; //Cria o texto do Botao
+        btnVoltar.Location = new Point(300, 500); // Posicionado o Botao na tela
+        btnVoltar.Width = 200; //Largura do Botao
+        btnVoltar.Height = 35; //Altura do Botao
+        Controls.Add(btnVoltar); //Coloca o Botao na tela
+
+        btnLogar = new Button(); //Cria o Botao
+        btnLogar.Text = "Logar"; //Cria o texto do Botao
+        btnLogar.Location = new Point(550, 500); // Posicionado o Botao na tela
+        btnLogar.Width = 200; //Largura do Botao
+        btnLogar.Height = 35; //Altura do Botao
+        Controls.Add(btnLogar); //Coloca o Botao na tela
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        //codigo que cria o texto NOME COMPLETO na janela
+        TextRenderer.DrawText(e.Graphics, "NOME COMPLETO", Font, new Point(20, 53), Color.HotPink);
+
+        //codigo que cria o texto SEXO na janela
+        TextRenderer.DrawText(e.Graphics, "SEXO", Font, new Point(600, 53), Color.HotPink);
+
+        //codigo que cria o texto DATA DE NASCIMENTO na janela
+        TextRenderer.DrawText(e.Graphics, "DATA DE NASCIMENTO", Font, new Point(20, 93), Color.HotPink);
+
+        //codigo que cria o texto CPF na janela
+        TextRenderer.DrawText(e.Graphics, "CPF", Font, new Point(300, 93), Color.HotPink);
+
+        //codigo que cria o texto RG na janela
+        TextRenderer.DrawText(e.Graphics, "RG", Font, new Point(480, 93), Color.HotPink);
+
+        //codigo que cria o texto NACIONALIDADE na janela
+        TextRenderer.DrawText(e.Graphics, "NACIONALIDADE", Font, new Point(640, 93), Color.HotPink);
+
+        //codigo que cria o texto EMAIL na janela
+        TextRenderer.DrawText(e.Graphics, "EMAIL", Font, new Point(20, 133), Color.HotPink);
+
+        //codigo que cria o texto TELEFONE CELULAR na janela
+        TextRenderer.DrawText(e.Graphics, "TELEFONE CELULAR", Font, new Point(320, 133), Color.HotPink);
+
+        //codigo que cria o texto TELEFONE RESIDENCIAL na janela
+        TextRenderer.DrawText(e.Graphics, "TELEFONE RESIDENCIAL", Font, new Point(640, 133), Color.HotPink);
+
+        //codigo que cria o texto CEP na janela
+        TextRenderer.DrawText(e.Graphics, "CEP", Font, new Point(20, 203), Color.HotPink);
+
+        //codigo que cria o texto LOGRADOURO na janela
+        TextRenderer.DrawText(e.Graphics, "LOGRADOURO", Font, new Point(180, 203), Color.HotPink);
+
+        //codigo que cria o texto NUMERO na janela
+        TextRenderer.DrawText(e.Graphics, "NUMERO", Font, new Point(500, 203), Color.HotPink);
+
+        //codigo que cria o texto COMPLEMENTO na janela
+        TextRenderer.DrawText(e.Graphics, "COMPLEMENTO", Font, new Point(650, 203), Color.HotPink);
+
+        //codigo que cria o texto BAIRRO na janela
+        TextRenderer.DrawText(e.Graphics, "BAIRRO", Font, new Point(20, 243), Color.HotPink);
+
+        //codigo que cria o texto CIDADE na janela
+        TextRenderer.DrawText(e.Graphics, "CIDADE", Font, new Point(290, 243), Color.HotPink);
+
+        //codigo que cria o texto ESTADO na janela
+        TextRenderer.DrawText(e.Graphics, "ESTADO", Font, new Point(560, 243), Color.HotPink);
+
+        //codigo que cria o texto CURSO na janela
+        TextRenderer.DrawText(e.Graphics, "CURSO", Font, new Point(20, 313), Color.HotPink);
+
+        //codigo que cria o texto MATRICULA na janela
+        TextRenderer.DrawText(e.Graphics, "MATRICULA", Font, new Point(310, 313), Color.HotPink);
+
+        //codigo que cria o texto ANO/SEMESTRE na janela
+        TextRenderer.DrawText(e.Graphics, "ANO/SEMESTRE", Font, new Point(540, 313), Color.HotPink);
+
+        //codigo que cria o texto MODALIDADE na janela
+        TextRenderer.DrawText(e.Graphics, "MODALIDADE", Font, new Point(20, 353), Color.HotPink);
+
+        //codigo que cria o texto TURNO na janela
+        TextRenderer.DrawText(e.Graphics, "TURNO", Font, new Point(260, 353), Color.HotPink);
+
+        //codigo que cria o texto ESCOLARIDADE ANTERIOR na janela
+        TextRenderer.DrawText(e.Graphics, "ESCOLARIDADE ANTERIOR", Font, new Point(450, 353), Color.HotPink);
+
+        //codigo que cria o texto NOME DO RESPONSAVEL na janela
+        TextRenderer.DrawText(e.Graphics, "NOME DO RESPONSAVEL", Font, new Point(20, 423), Color.HotPink);
+
+        //codigo que cria o texto CPF DO RESPONSAVEL na janela
+        TextRenderer.DrawText(e.Graphics, "CPF DO RESPONSAVEL", Font, new Point(520, 423), Color.HotPink);
+
+        //codigo que cria o texto OBSERVACAO na janela
+        TextRenderer.DrawText(e.Graphics, "OBSERVACAO", Font, new Point(20, 463), Color.HotPink);
+    }
+}
